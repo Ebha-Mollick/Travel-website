@@ -1,9 +1,9 @@
-import React from 'react'
+import Home from "./components/home/Home";
 
 const App = () => {
   return (
-    <div>
-      from app
+    <div className="font-Montserrat bg-[#001E23]">
+      <Home/>
     </div>
   )
 }
