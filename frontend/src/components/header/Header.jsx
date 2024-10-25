@@ -1,6 +1,7 @@
 import { useContext, createContext, useState } from 'react';
 import './Header.css';
 import { FaYoutube } from "react-icons/fa";
+import Slider from '../../utils/slider/Slider';
 
 // Create a context for activeSlideIndex
 const SliderContext = createContext();
@@ -36,7 +37,7 @@ const Header = () => {
                             {state}
                         </span>
                     </h1>
-                    <p className='text-white mt-[70px] p-2 w-[95%] font-semibold'>
+                    <p className='text-white mt-[70px] p-2 w-[95%] font-semibold '>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deserunt, earum ipsa cum explicabo obcaecati ratione at sapiente rem ipsum minus quia voluptas doloremque cumque assumenda dignissimos fugit exercitationem odio.
                     </p>
                 </div>
@@ -49,7 +50,7 @@ const Header = () => {
     const classChange = handleClass(activeSlideIndex);
 
     return (
-        <div className='flex items-center mt-[40px]'>
+        <div className='flex items-center mt-[40px] ml-16'>
             <div className=''>
                 {classChange}
                 <div className='mt-[100px] flex gap-12'>
@@ -59,7 +60,7 @@ const Header = () => {
             </div>
             <div className='w-1/2 flex flex-col items-end justify-end relative'>
                 <div>
-                    Slider Here
+                    <Slider/>
                 </div>
                 <div>
                     Social icons here
