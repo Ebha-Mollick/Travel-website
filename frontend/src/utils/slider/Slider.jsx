@@ -6,6 +6,9 @@ import { useRef } from "react";
 import { Pagination } from "swiper/modules";
 import { useContext, useEffect } from "react";
 import { MyContext } from "../../context/Appcontext";
+import imgage1 from "../../assets/Goa/imgage1.avif";
+import image2 from "../../assets/Himachal/image2.avif";
+import img3 from "../../assets/Kerala/img3.avif";
 
 const Slider = () => {
 const swiperRef = useRef(null);
@@ -25,16 +28,16 @@ const handleSlideChange = (swiper)=>{
 
   const places = [
     {
-      name: "Ponot waterfall",
-    
+      name: "Goa",
+      img: imgage1,
     },
     {
-      name: "Brown cliff",
-      
+      name: "Himachal",
+      img: image2,
     },
     {
-      name: "himalaya",
-      
+      name: "Kerala",
+      img: img3,
     },
 
   ]
@@ -59,7 +62,7 @@ const handleSlideChange = (swiper)=>{
           places.map((item, i)=>(
             <SwiperSlide key={i}>
               <div className="relative">
-                <img src={item.img} alt=""  className="object-cover shadow-xl"/>
+                <img src={item.img} alt={item.name}  className="object-cover shadow-xl"/>
                 {/* <div>sample text......</div> */}
               </div>
 
@@ -72,4 +75,4 @@ const handleSlideChange = (swiper)=>{
   )
 }
 
-export default Slider
+export default Slider;

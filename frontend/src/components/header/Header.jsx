@@ -8,16 +8,16 @@ const SliderContext = createContext();
 
 const contentData = [
     {
+        state: "Goa",
+        title: "Explore Goa",
+    },
+    {
+        state: "Himachal",
+        title: "Explore Himachal",
+    },
+    {
         state: "Kerala",
         title: "Explore Kerala",
-    },
-    {
-        state: "West Bengal",
-        title: "Explore West Bengal",
-    },
-    {
-        state: "Uttrakhand",
-        title: "Explore Uttrakhand",
     },
 ];
 
@@ -31,7 +31,7 @@ const Header = () => {
         if (state && title) {
             return (
                 <div>
-                    <h1>
+                    <h1 className="text-[144px] text-white font-Montserrat font-[800] leading-[140px]">
                         Explore <br />
                         <span className={`state ${state}`} data-state={state}>
                             {state}
@@ -55,7 +55,10 @@ const Header = () => {
                 {classChange}
                 <div className='mt-[100px] flex gap-12'>
                     <button className='border-2 border-[#00A1B9] text-[20px] px-6 py-2 font-semibold text-white hover:text-[#00A1B9]'>Book Now</button>
-                    <button> <FaYoutube /> Watch Videos like this</button>
+                    <button className='flex items-center gap-2'> 
+                        <FaYoutube className='text-red-700 text-[40px]'/> 
+                       <span className='text-white '>Watch Videos like this</span> 
+                        </button>
                 </div>
             </div>
             <div className='w-1/2 flex flex-col items-end justify-end relative'>
